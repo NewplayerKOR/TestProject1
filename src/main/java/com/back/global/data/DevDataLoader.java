@@ -11,12 +11,11 @@ import lombok.extern.slf4j.Slf4j;
 @Configuration
 @Slf4j
 @Profile("dev")
-public class DataLoader {
+public class DevDataLoader {
 
     @Bean
     public CommandLineRunner loadDevData(UserRepository userRepository) {
         return args -> {
-            log.info("Loading initial data for DEV environment...");
             // 개발용 사용자 100명 생성
             for (int i = 1; i <= 100; i++) {
                 User user = new User();

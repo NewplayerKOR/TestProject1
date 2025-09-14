@@ -6,9 +6,11 @@ spring:
 
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:devdb
+#    url: jdbc:h2:mem:db_dev
+    # FileDB형식일 경우
+    url: jdbc:h2:file:./db_dev
     username: sa
-    password: password
+    password:
   jpa:
     hibernate:
       ddl-auto: create-drop

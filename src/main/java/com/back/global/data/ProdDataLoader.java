@@ -16,7 +16,6 @@ public class ProdDataLoader {
     @Bean
     public CommandLineRunner loadProdData(UserRepository userRepository) {
         return args -> {
-            log.info("Loading initial data for PROD environment...");
             // 운영용 사용자 100명 생성
             for (int i = 1; i <= 100; i++) {
                 User user = new User();
